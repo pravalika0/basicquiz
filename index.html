@@ -383,6 +383,7 @@
         correctOptionIndex = json.Correct_Option - 1;
       };
       document.addEventListener("DOMContentLoaded", (event) => {
+        getQuestion();
         setQuestion();
         const optionsNodes = document.querySelectorAll("#option");
         const resetOptions = () => {
