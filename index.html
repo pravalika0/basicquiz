@@ -410,6 +410,20 @@
           });
         });
       });
+      var timeLeft = 30;
+var elem = document.getElementById('Timer');
+
+var timerId = setInterval(countdown, 1000);
+
+function countdown() {
+  if (timeLeft == 0) {
+    clearTimeout(timerId);
+    doSomething();
+  } else {
+    elem.innerHTML = timeLeft + ' seconds remaining';
+    timeLeft--;
+  }
+}
     </script>
   </head>
   <body>
@@ -420,6 +434,7 @@
         <button id="option">H<sub>2</sub>O</button>
         <button id="option">KCl</button>
         <button id="option">MgCl<sub>2</sub></button>
+        <div id="Timer"></div>
       </div>
     </div>
   </body>
